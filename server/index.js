@@ -4,6 +4,8 @@ const adminData = require("./db Schemas/Admin");
 const schemeData = require("./db Schemas/Scheme");
 const cropData = require("./db Schemas/Crop");
 const applicationData = require("./db Schemas/Application");
+const dotenv = require("dotenv");
+dotenv.config();
 
 const cors = require("cors");
 
@@ -18,6 +20,7 @@ mongoose
   .connect("mongodb://localhost:27017/farmerproject")
   .then((res) => {
     app.listen(3002, () => {
+      console.log(process.env.name);
       console.log("server and database are running");
     });
   })

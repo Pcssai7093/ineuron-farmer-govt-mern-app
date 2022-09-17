@@ -22,3 +22,10 @@
 .body button:hover{
     background-color: green;
 }
+
+@media screen and (max-width:400px){
+    .links{
+        display: flex;
+        flex-direction: column;
+    } 
+}
